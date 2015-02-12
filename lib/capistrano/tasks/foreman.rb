@@ -47,7 +47,7 @@ namespace :foreman do
       if sudo_type.to_s == "rbenv"
         execute(:rbenv, :sudo, *args)
       elsif sudo_type.to_s == "rvm"
-        execute(:rvmsudo *args)
+        execute(:rvmsudo, *args)
       else
         sudo(*args)
       end
